@@ -92,7 +92,7 @@ angular.module("internationalPhoneNumber", [])
       if !value
         return value
 
-      value.replace(/[^\d]/g, '')
+      value.replace(/[^\d\+]/g, '')
 
     ctrl.$validators.internationalPhoneNumber = (value) ->
       selectedCountry = element.intlTelInput('getSelectedCountryData')
